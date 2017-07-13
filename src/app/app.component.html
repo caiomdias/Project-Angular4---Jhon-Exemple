@@ -1,0 +1,21 @@
+<section style="margin-left: 20%">
+  <h1>
+    {{title}}
+  </h1>
+
+  <div [style.color]="nameColor"> {{ name }}
+    <button class="marginCuston" (click)="changeColorName()">change the color name</button>
+  </div>
+  <br>
+
+  <div>
+    <label> event blur = name= $event.target.value</label>
+    <input type="text" [value]="name" (blur)="name = $event.target.value">
+    <br>
+    <label> ngModel </label>
+    <input type="text" [(ngModel)]="name">
+  </div>
+
+  <app-custumers></app-custumers>
+
+</section>
