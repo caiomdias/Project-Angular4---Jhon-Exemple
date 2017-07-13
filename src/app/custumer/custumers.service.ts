@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from "@angular/http";
-import { Observable } from "rxjs/Observable";
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 
 
@@ -13,7 +13,7 @@ export class CustumersService {
 
     getCustumers(){
         return this.http.get(URL_CUSTUMER)
-        .map((response: Response) => response.json());    
+        .map((response: Response) => response.json());
     }
 
 

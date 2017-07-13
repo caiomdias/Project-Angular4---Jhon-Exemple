@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CustumersService } from "app/custumer/custumers.service";
-import { Observable } from "rxjs/Rx";
+import { CustumersService } from 'app/custumer/custumers.service';
+import { Observable } from 'rxjs/Rx';
 
 @Component({
     selector: 'app-custumers',
@@ -15,7 +15,7 @@ export class CustumersComponent implements OnInit {
 
      }
 
-    ngOnInit() { 
+    ngOnInit() {
         this.custumers = this.custumersService.getCustumers();
     }
 }

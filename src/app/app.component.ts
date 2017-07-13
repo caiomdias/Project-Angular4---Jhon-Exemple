@@ -15,6 +15,6 @@ export class AppComponent {
   nameColor = 'blue';
 
   changeColorName() {
-    this.nameColor = this.nameColor === 'blue' ? 'red' : 'blue'
+    this.nameColor = this.nameColor === 'blue' ? 'red' : 'blue';
   }
 }

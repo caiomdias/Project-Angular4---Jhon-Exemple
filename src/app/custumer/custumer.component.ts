@@ -8,7 +8,7 @@ export class CustumerComponent implements OnInit {
 
      myColour = 'red';
 
-    @Input() custumer = { id: Number, name: String }
+    @Input() custumer = { id: Number, name: String };
 
     constructor() { }
 

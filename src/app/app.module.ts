@@ -5,8 +5,8 @@ import { HttpModule } from '@angular/http'
 
 import { AppComponent } from './app.component';
 import { CustumerComponent } from 'app/custumer/custumer.component';
-import { CustumersComponent } from "app/custumer/custumers.component";
-import { CustumersService } from "app/custumer/custumers.service";
+import { CustumersComponent } from 'app/custumer/custumers.component';
+import { CustumersService } from 'app/custumer/custumers.service';
 
 
 @NgModule({
