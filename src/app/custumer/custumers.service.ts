@@ -31,5 +31,4 @@ export class CustumersService {
         console.log(err);
         return Observable.throw(err);
     }
-
 }
