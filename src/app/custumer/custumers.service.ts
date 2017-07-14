@@ -9,15 +9,25 @@ const URL_CUSTUMER = 'app/costumers.json';
 @Injectable()
 export class CustumersService {
 
-    constructor(private http:Http){}
+    constructor(private http: Http) { }
 
-    getCustumers(){
+    getCustumers() {
         return this.http.get('http://localhost:3000/api/v1/clients/')
-        .map((response: Response) => response.json())
-        .catch(this.handleError);
+            .map((response: Response) => response.json())
+            .toPromise()
+            .catch((err) => {
+                console.log(err);
+                return Promise.reject(err);
+            });
     }
 
-    handleError(err:any){
+    getCustumersRxJs() {
+        return this.http.get('http://localhost:3000/api/v1/clients/')
+            .map((response: Response) => response.json())
+            .catch(this.handleError);
+    }
+
+    handleError(err: any) {
         console.log(err);
         return Observable.throw(err);
     }
