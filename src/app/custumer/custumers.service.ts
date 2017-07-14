@@ -12,9 +12,14 @@ export class CustumersService {
     constructor(private http:Http){}
 
     getCustumers(){
-        return this.http.get(URL_CUSTUMER)
-        .map((response: Response) => response.json());
+        return this.http.get('http://localhost:3000/api/v1/clients/')
+        .map((response: Response) => response.json())
+        .catch(this.handleError);
     }
 
+    handleError(err:any){
+        console.log(err);
+        return Observable.throw(err);
+    }
 
 }
